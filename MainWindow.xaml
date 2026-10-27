@@ -1,100 +1,104 @@
 ﻿<Window x:Class="pr7_trpo_praktika.MainWindow"
         xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
         xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
-        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
-        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
-        xmlns:local="clr-namespace:pr7_trpo_praktika"
-        mc:Ignorable="d"
-        Title="Фильмы" Height="510" Width="950" MinHeight="475" MinWidth="850"
+        Title="Фильмы"
+        Height="540" Width="980"
+        MinHeight="500" MinWidth="900"
         Loaded="Window_Loaded">
-    <Grid Margin="10">
+
+    <Window.Resources>
+        <Style x:Key="PinkButton" TargetType="Button">
+            <Setter Property="Background" Value="#F8BBD0"/>
+            <Setter Property="Foreground" Value="#442D38"/>
+            <Setter Property="MinHeight" Value="32"/>
+            <Setter Property="Padding" Value="8,5"/>
+        </Style>
+    </Window.Resources>
+
+    <Grid Margin="12">
         <Grid.ColumnDefinitions>
-            <ColumnDefinition Width="290"/>
+            <ColumnDefinition Width="270"/>
             <ColumnDefinition Width="*"/>
         </Grid.ColumnDefinitions>
 
-        <!-- Простая форма редактирования слева, как в исходной работе -->
-        <Grid Grid.Column="0" Margin="0,0,14,0">
-            <Grid.RowDefinitions>
-                <RowDefinition Height="Auto"/>
-                <RowDefinition Height="Auto"/>
-                <RowDefinition Height="Auto"/>
-                <RowDefinition Height="*"/>
-            </Grid.RowDefinitions>
+        <StackPanel Grid.Column="0" Margin="0,0,18,0">
+            <TextBlock Text="Данные фильма" FontSize="16" FontWeight="SemiBold"
+                       Margin="0,0,0,12"/>
 
-            <TextBlock Text="Данные фильма" FontWeight="SemiBold" Margin="0,2,0,10"/>
+            <TextBlock Text="Название"/>
+            <TextBox Text="{Binding MovieTitle, UpdateSourceTrigger=PropertyChanged}"
+                     Margin="0,2,0,8"/>
 
-            <StackPanel Grid.Row="1">
-                <TextBlock Text="Название:"/>
-                <TextBox Text="{Binding MovieTitle, UpdateSourceTrigger=PropertyChanged}" Margin="0,0,0,7"/>
-                <TextBlock Text="Жанр:"/>
-                <TextBox Text="{Binding MovieGenre, UpdateSourceTrigger=PropertyChanged}" Margin="0,0,0,7"/>
-                <TextBlock Text="Длительность (мин):"/>
-                <TextBox Text="{Binding DurationText, UpdateSourceTrigger=PropertyChanged}" Margin="0,0,0,7"/>
-                <TextBlock Text="Год выпуска:"/>
-                <TextBox Text="{Binding ReleaseYearText, UpdateSourceTrigger=PropertyChanged}" Margin="0,0,0,7"/>
-                <CheckBox Content="Доступен" IsChecked="{Binding MovieIsAvailable}" Margin="0,3,0,12"/>
-            </StackPanel>
+            <TextBlock Text="Жанр"/>
+            <TextBox Text="{Binding MovieGenre, UpdateSourceTrigger=PropertyChanged}"
+                     Margin="0,2,0,8"/>
 
-            <!-- Кнопки размещены в два ряда вместо вертикального списка -->
-            <Grid Grid.Row="2">
-                <Grid.ColumnDefinitions>
-                    <ColumnDefinition Width="2*"/>
-                    <ColumnDefinition Width="3*"/>
-                </Grid.ColumnDefinitions>
-                <Grid.RowDefinitions>
-                    <RowDefinition Height="Auto"/>
-                    <RowDefinition Height="Auto"/>
-                </Grid.RowDefinitions>
-                <Button x:Name="Create" Content="Создать" Grid.Row="0" Grid.Column="0"
-                        Click="Create_Click" Margin="0,0,6,6" Background="#F8BBD0" Foreground="#442D38"/>
-                <Button x:Name="Change" Content="Изменить" Grid.Row="0" Grid.Column="1"
-                        Click="Change_Click" Margin="0,0,0,6" Background="#F8BBD0" Foreground="#442D38"/>
-                <Button x:Name="Del" Content="Удалить" Grid.Row="1" Grid.Column="0"
-                        Click="Del_Click" Margin="0,0,6,0" Background="#F8BBD0" Foreground="#442D38"/>
-                <Button x:Name="ChangeFull" Content="Изменить полностью" Grid.Row="1" Grid.Column="1"
-                        Click="ChangeFull_Click" Background="#F8BBD0" Foreground="#442D38"/>
-            </Grid>
-        </Grid>
+            <TextBlock Text="Длительность (мин)"/>
+            <TextBox Text="{Binding DurationText, UpdateSourceTrigger=PropertyChanged}"
+                     Margin="0,2,0,8"/>
 
+            <TextBlock Text="Год выпуска"/>
+            <TextBox Text="{Binding ReleaseYearText, UpdateSourceTrigger=PropertyChanged}"
+                     Margin="0,2,0,8"/>
+
+            <CheckBox Content="Доступен" IsChecked="{Binding MovieIsAvailable}"
+                      Margin="0,4,0,12"/>
+
+            <UniformGrid Columns="2" Rows="2">
+                <Button x:Name="Create" Content="Создать" Click="Create_Click"
+                        Style="{StaticResource PinkButton}" Margin="0,0,6,6"/>
+                <Button x:Name="Change" Content="Изменить" Click="Change_Click"
+                        Style="{StaticResource PinkButton}" Margin="0,0,0,6"/>
+                <Button x:Name="ChangeFull" Content="Полностью" Click="ChangeFull_Click"
+                        ToolTip="Изменить полностью"
+                        Style="{StaticResource PinkButton}" Margin="0,0,6,0"/>
+                <Button x:Name="Del" Content="Удалить" Click="Del_Click"
+                        Style="{StaticResource PinkButton}"/>
+            </UniformGrid>
+        </StackPanel>
+
+     
         <Grid Grid.Column="1">
             <Grid.RowDefinitions>
                 <RowDefinition Height="Auto"/>
                 <RowDefinition Height="Auto"/>
-                <RowDefinition Height="Auto"/>
                 <RowDefinition Height="*"/>
             </Grid.RowDefinitions>
 
-            <TextBlock Text="Список фильмов" FontWeight="SemiBold" Margin="0,2,0,10"/>
+            <TextBlock Text="Список фильмов" FontSize="16" FontWeight="SemiBold"
+                       Margin="0,0,0,12"/>
 
-            <StackPanel Grid.Row="1" Orientation="Horizontal" Margin="0,0,0,6">
-                <TextBlock Text="Жанр:" VerticalAlignment="Center" Margin="0,0,6,0"/>
-                <TextBox Width="190" Text="{Binding FilterGenre, UpdateSourceTrigger=PropertyChanged}" Margin="0,0,16,0"/>
-                <TextBlock Text="Год от:" VerticalAlignment="Center" Margin="0,0,6,0"/>
-                <TextBox Width="95" Text="{Binding FilterMinYear, UpdateSourceTrigger=PropertyChanged}"/>
+            <StackPanel Grid.Row="1" Margin="0,0,0,10">
+                <StackPanel Orientation="Horizontal" Margin="0,0,0,8">
+                    <TextBlock Text="Жанр:" VerticalAlignment="Center" Margin="0,0,7,0"/>
+                    <TextBox Width="165" Text="{Binding FilterGenre, UpdateSourceTrigger=PropertyChanged}"
+                             Margin="0,0,18,0"/>
+                    <TextBlock Text="Год от:" VerticalAlignment="Center" Margin="0,0,7,0"/>
+                    <TextBox Width="90" Text="{Binding FilterMinYear, UpdateSourceTrigger=PropertyChanged}"/>
+                </StackPanel>
+
+                <StackPanel Orientation="Horizontal">
+                    <Button x:Name="Apply" Content="Найти" Click="Apply_Click"
+                            Style="{StaticResource PinkButton}" Margin="0,0,7,0"/>
+                    <Button x:Name="Reset" Content="Отчистить" Click="Reset_Click"
+                            Style="{StaticResource PinkButton}" Margin="0,0,7,0"/>
+                    <Button x:Name="Refresh" Content="Обновить" Click="Refresh_Click"
+                            Style="{StaticResource PinkButton}"/>
+                </StackPanel>
             </StackPanel>
 
-            <!-- Управление фильтрами вынесено в отдельную небольшую строку -->
-            <StackPanel Grid.Row="2" Orientation="Horizontal" HorizontalAlignment="Right" Margin="0,0,0,8">
-                <Button x:Name="Apply" Content="Применить" Click="Apply_Click" Margin="0,0,6,0"
-                        Background="#F8BBD0" Foreground="#442D38"/>
-                <Button x:Name="Reset" Content="Убрать" Click="Reset_Click" Margin="0,0,6,0"
-                        Background="#F8BBD0" Foreground="#442D38"/>
-                <Button x:Name="Refresh" Content="Обновить" Click="Refresh_Click"
-                        Background="#F8BBD0" Foreground="#442D38"/>
-            </StackPanel>
-
-            <ListView Grid.Row="3" ItemsSource="{Binding Movies}"
+            <ListView Grid.Row="2" ItemsSource="{Binding Movies}"
                       SelectedItem="{Binding SelectedMovie, Mode=TwoWay}"
-                      SelectionMode="Single" SelectionChanged="Movies_SelectionChanged">
+                      SelectionMode="Single"
+                      SelectionChanged="Movies_SelectionChanged">
                 <ListView.View>
                     <GridView>
-                        <GridViewColumn Header="ID" DisplayMemberBinding="{Binding Id}"/>
-                        <GridViewColumn Header="Title" DisplayMemberBinding="{Binding Title}"/>
-                        <GridViewColumn Header="Genre" DisplayMemberBinding="{Binding Genre}"/>
-                        <GridViewColumn Header="Duration" DisplayMemberBinding="{Binding DurationMinutes}"/>
-                        <GridViewColumn Header="Year" DisplayMemberBinding="{Binding ReleaseYear}"/>
-                        <GridViewColumn Header="Available" DisplayMemberBinding="{Binding IsAvailable}"/>
+                        <GridViewColumn Header="ID" Width="40" DisplayMemberBinding="{Binding Id}"/>
+                        <GridViewColumn Header="Название" Width="150" DisplayMemberBinding="{Binding Title}"/>
+                        <GridViewColumn Header="Жанр" Width="100" DisplayMemberBinding="{Binding Genre}"/>
+                        <GridViewColumn Header="Мин." Width="65" DisplayMemberBinding="{Binding DurationMinutes}"/>
+                        <GridViewColumn Header="Год" Width="65" DisplayMemberBinding="{Binding ReleaseYear}"/>
+                        <GridViewColumn Header="Доступен" Width="95" DisplayMemberBinding="{Binding IsAvailable}"/>
                     </GridView>
                 </ListView.View>
             </ListView>

@@ -16,7 +16,7 @@ namespace pr7_trpo_praktika
         private const string Route = "api/v1/Movies";
         private readonly HttpClient hc = new HttpClient
         {
-            BaseAddress = new Uri("https://localhost:7193/"),
+            BaseAddress = new Uri("https://localhost:7143/"),
             Timeout = TimeSpan.FromSeconds(15)
         };
 

@@ -25,3 +25,4 @@ C:\Users\User\Downloads\pr7_trpo_praktika_pink\pr7_trpo_praktika\obj\Debug\net8.
 C:\Users\User\Downloads\pr7_trpo_praktika_pink\pr7_trpo_praktika\obj\Debug\net8.0-windows\pr7_trpo_praktika.pdb
 C:\Users\User\Downloads\pr7_trpo_praktika_pink\pr7_trpo_praktika\obj\Debug\net8.0-windows\pr7_trpo_praktika.genruntimeconfig.cache
 C:\Users\User\Downloads\pr7_trpo_praktika_pink\pr7_trpo_praktika\obj\Debug\net8.0-windows\ref\pr7_trpo_praktika.dll
+C:\Users\User\Downloads\pr7_trpo_praktika_pink\pr7_trpo_praktika\obj\Debug\net8.0-windows\pr7_trpo_praktika.sourcelink.json

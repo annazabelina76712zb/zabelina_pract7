@@ -3,8 +3,24 @@
   "WorkspaceRootPath": "C:\\Users\\User\\Downloads\\pr7_trpo_praktika_pink\\pr7_trpo_praktika\\",
   "Documents": [
     {
+      "AbsoluteMoniker": "D:0:0:{18739C36-135F-479F-BF79-78C029087593}|pr7_trpo_praktika.csproj|c:\\users\\user\\downloads\\pr7_trpo_praktika_pink\\pr7_trpo_praktika\\mainwindow.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{18739C36-135F-479F-BF79-78C029087593}|pr7_trpo_praktika.csproj|solutionrelative:mainwindow.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
       "AbsoluteMoniker": "D:0:0:{18739C36-135F-479F-BF79-78C029087593}|pr7_trpo_praktika.csproj|c:\\users\\user\\downloads\\pr7_trpo_praktika_pink\\pr7_trpo_praktika\\mainwindow.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
       "RelativeMoniker": "D:0:0:{18739C36-135F-479F-BF79-78C029087593}|pr7_trpo_praktika.csproj|solutionrelative:mainwindow.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{18739C36-135F-479F-BF79-78C029087593}|pr7_trpo_praktika.csproj|c:\\users\\user\\downloads\\pr7_trpo_praktika_pink\\pr7_trpo_praktika\\app.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{18739C36-135F-479F-BF79-78C029087593}|pr7_trpo_praktika.csproj|solutionrelative:app.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{18739C36-135F-479F-BF79-78C029087593}|pr7_trpo_praktika.csproj|c:\\users\\user\\downloads\\pr7_trpo_praktika_pink\\pr7_trpo_praktika\\app.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
+      "RelativeMoniker": "D:0:0:{18739C36-135F-479F-BF79-78C029087593}|pr7_trpo_praktika.csproj|solutionrelative:app.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{18739C36-135F-479F-BF79-78C029087593}|pr7_trpo_praktika.csproj|c:\\users\\user\\downloads\\pr7_trpo_praktika_pink\\pr7_trpo_praktika\\assemblyinfo.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{18739C36-135F-479F-BF79-78C029087593}|pr7_trpo_praktika.csproj|solutionrelative:assemblyinfo.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
@@ -14,11 +30,49 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 0,
+          "SelectedChildIndex": 2,
           "Children": [
             {
               "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "AssemblyInfo.cs",
+              "DocumentMoniker": "C:\\Users\\User\\Downloads\\pr7_trpo_praktika_pink\\pr7_trpo_praktika\\AssemblyInfo.cs",
+              "RelativeDocumentMoniker": "AssemblyInfo.cs",
+              "ToolTip": "C:\\Users\\User\\Downloads\\pr7_trpo_praktika_pink\\pr7_trpo_praktika\\AssemblyInfo.cs",
+              "RelativeToolTip": "AssemblyInfo.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-10-27T08:42:54.822Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "App.xaml",
+              "DocumentMoniker": "C:\\Users\\User\\Downloads\\pr7_trpo_praktika_pink\\pr7_trpo_praktika\\App.xaml",
+              "RelativeDocumentMoniker": "App.xaml",
+              "ToolTip": "C:\\Users\\User\\Downloads\\pr7_trpo_praktika_pink\\pr7_trpo_praktika\\App.xaml",
+              "RelativeToolTip": "App.xaml",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
+              "WhenOpened": "2026-10-27T08:42:47.32Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
               "DocumentIndex": 0,
+              "Title": "MainWindow.xaml.cs",
+              "DocumentMoniker": "C:\\Users\\User\\Downloads\\pr7_trpo_praktika_pink\\pr7_trpo_praktika\\MainWindow.xaml.cs",
+              "RelativeDocumentMoniker": "MainWindow.xaml.cs",
+              "ToolTip": "C:\\Users\\User\\Downloads\\pr7_trpo_praktika_pink\\pr7_trpo_praktika\\MainWindow.xaml.cs",
+              "RelativeToolTip": "MainWindow.xaml.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAMgAAAAvAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-10-27T08:22:05.531Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
               "Title": "MainWindow.xaml",
               "DocumentMoniker": "C:\\Users\\User\\Downloads\\pr7_trpo_praktika_pink\\pr7_trpo_praktika\\MainWindow.xaml",
               "RelativeDocumentMoniker": "MainWindow.xaml",
@@ -26,6 +80,19 @@
               "RelativeToolTip": "MainWindow.xaml",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
               "WhenOpened": "2026-10-27T08:05:30.983Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "App.xaml.cs",
+              "DocumentMoniker": "C:\\Users\\User\\Downloads\\pr7_trpo_praktika_pink\\pr7_trpo_praktika\\App.xaml.cs",
+              "RelativeDocumentMoniker": "App.xaml.cs",
+              "ToolTip": "C:\\Users\\User\\Downloads\\pr7_trpo_praktika_pink\\pr7_trpo_praktika\\App.xaml.cs",
+              "RelativeToolTip": "App.xaml.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-10-27T08:43:02.462Z",
               "EditorCaption": ""
             }
           ]
